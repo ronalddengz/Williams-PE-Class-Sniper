@@ -1,0 +1,75 @@
+from selenium import webdriver
+from time import sleep
+
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+url = 'https://sarah.williams.edu/psp/cs92prd/?cmd=login'
+
+username = input("Username (without williams.edu): ") 
+email = username + "@williams.edu"
+password = input("Password: ")
+
+okta = input("Verification via code or push notification? (1/2) ")
+class_id = f"WMS_M166_WK_SELECT${int(input('Class number (see classes.txt for class numbers): ')) - 1}"
+
+browser = webdriver.Firefox()
+browser.get(url)
+sleep(1)
+browser.find_element(By.ID, "identifierId").send_keys(email)
+
+WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.ID, "identifierNext")))
+browser.find_element(By.ID, "identifierNext").click()
+
+WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "input28")))
+browser.find_element(By.ID, "input28").send_keys(username)
+
+WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".button")))
+browser.find_element(By.CSS_SELECTOR, ".button").click()
+
+WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "input60")))
+browser.find_element(By.ID, "input60").send_keys(password)
+
+WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".button")))
+browser.find_element(By.CSS_SELECTOR, ".button").click()
+
+if(okta == 1):
+    WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.authenticator-row:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)")))
+    browser.find_element(By.CSS_SELECTOR, "div.authenticator-row:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)").click()
+
+else:
+    WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.authenticator-row:nth-child(2) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)")))
+    browser.find_element(By.CSS_SELECTOR, "div.authenticator-row:nth-child(2) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)").click()   
+
+WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "userid")))
+browser.find_element(By.ID, "userid").send_keys(username)
+browser.find_element(By.ID, "pwd").send_keys(password)
+browser.find_element(By.CSS_SELECTOR, ".ps-button").click()
+
+WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "win0groupletPTNUI_LAND_REC_GROUPLET$2")))
+browser.find_element(By.ID, "win0groupletPTNUI_LAND_REC_GROUPLET$2").click()
+
+
+WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "pthnavbca_PORTAL_ROOT_OBJECT")))
+browser.find_element(By.ID, "pthnavbca_PORTAL_ROOT_OBJECT").click()
+
+WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "CO_EMPLOYEE_SELF_SERVICE")))
+browser.find_element(By.ID, "CO_EMPLOYEE_SELF_SERVICE").click()
+
+WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "HCCC_ENROLLMENT")))
+browser.find_element(By.ID, "HCCC_ENROLLMENT").click()
+
+WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//a[text()='PE Class Registration']")))
+browser.find_element(By.XPATH, "//a[text()='PE Class Registration']").click()
+
+print("Now we wait... Don't close out of this program or that window!")
+
+while True:
+    try:
+        WebDriverWait(browser, 1).until(EC.element_to_be_clickable((By.ID, class_id)))
+        browser.find_element(By.ID, class_id).click()
+        break
+    
+    except:
+        sleep(1)
