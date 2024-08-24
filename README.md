@@ -17,4 +17,6 @@ https://www.mozilla.org/en-US/firefox/windows/
 **(and also python, duh)**
 https://www.python.org/downloads/
 
-dude I don't even know if this works
+if you get an error, try running it again. or, if you don't care enough, that's also ok.
+
+dude I don't even know if this works.
