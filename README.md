@@ -5,8 +5,8 @@
 
 *how to do that:*
 1. Open terminal
-Windows: ⊞ Windows key + X, and then selecting Windows Terminal (Admin)
-Mac: ⌘ Commnd key + spacebar, type in "Terminal"
+- Windows: ⊞ Windows key + X, and then selecting Windows Terminal (Admin)
+- Mac: ⌘ Commnd key + spacebar, type in "Terminal"
 
 2. Install selenium
 Type `pip install selenium` into your terminal
