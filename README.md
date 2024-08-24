@@ -7,6 +7,6 @@ Mac: ⌘ Commnd key + spacebar, type in "Terminal"
 2. Install selenium
 Type "pip install selenium" into your terminal
 
-***and also firefox, sorry guys****
+***and also firefox, sorry guys***
 
 dude I don't even know if this works
