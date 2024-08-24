@@ -1,4 +1,5 @@
 ***make sure you have selenium installed!***
+\br
 *how to do that:*
 1. Open terminal
 Windows: ⊞ Windows key + X, and then selecting Windows Terminal (Admin)
