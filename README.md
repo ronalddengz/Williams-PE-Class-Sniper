@@ -4,11 +4,11 @@
 ***make sure you have selenium installed!***
 
 *how to do that:*
-1. Open terminal
-- Windows: ⊞ Windows key + X, and then selecting Windows Terminal (Admin)
-- Mac: ⌘ Commnd key + spacebar, type in "Terminal"
+1. Open terminal<br>
+Windows: ⊞ Windows key + X, and then selecting Windows Terminal (Admin)<br>
+Mac: ⌘ Commnd key + spacebar, type in "Terminal"
 
-2. Install selenium
+2. Install selenium<br>
 Type `pip install selenium` into your terminal
 
 ***and also download firefox, sorry guys***
