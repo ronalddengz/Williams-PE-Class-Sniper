@@ -1,12 +1,15 @@
+# Williams College PE Class Sniper
+## This will only be useful, like, once, ever
+
 ***make sure you have selenium installed!***
-\br
+
 *how to do that:*
 1. Open terminal
 Windows: ⊞ Windows key + X, and then selecting Windows Terminal (Admin)
 Mac: ⌘ Commnd key + spacebar, type in "Terminal"
 
 2. Install selenium
-Type "pip install selenium" into your terminal
+Type `pip install selenium` into your terminal
 
 ***and also firefox, sorry guys***
 
