@@ -1,0 +1,33 @@
+1: 3v3 Basketball
+2: Badminton
+3: Ballet I
+4: Ballet II
+5: Ballet III
+6: Beginning Swim
+7: Dance-Modern Int/Adv
+8: Design Your Own PE
+9: Farm Fun
+10: Golf - Advanced
+11: Golf- Beginner A
+12: Golf- Beginner B
+13: HIIT
+14: Intro to Volleyball
+15: Intro to Yoga
+16: Jog Williamstown
+17: Kettlebell Circuit Training
+18: Muscle Fitness
+19: Pickleball
+20: RAD
+21: Spikeball
+22: Squash (T,F)
+23: Squash (T, R)
+24: Swim for Fitness
+25: Trail Running
+26: WOC Canoeing
+27: WOC Hiking A
+28: WOC Sampler
+29: WOC Ski Patrol Certification course
+30: Walk for Fitness
+31: Wellness
+32: Women's Weight Training
+33: Zena Rommett Floor Barre
