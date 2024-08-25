@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-url = 'https://sarah.williams.edu/psp/cs92prd/?cmd=login'
+url = 'https://sarah.williams.edu/psp/cs92prd/EMPLOYEE/SA/c/WMS_SS_STU_MENU.WMS_SS_PE_REG.GBL?FolderPath=PORTAL_ROOT_OBJECT.CO_EMPLOYEE_SELF_SERVICE.HCCC_ENROLLMENT.WMS_SS_PE_REG&IsFolder=false&IgnoreParamTempl=FolderPath,IsFolder'
 
 username = input("Username (without williams.edu): ") 
 email = username + "@williams.edu"
@@ -46,22 +46,6 @@ WebDriverWait(browser, 100).until(EC.presence_of_element_located((By.ID, "userid
 browser.find_element(By.ID, "userid").send_keys(username)
 browser.find_element(By.ID, "pwd").send_keys(password)
 browser.find_element(By.CSS_SELECTOR, ".ps-button").click()
-
-WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "win0groupletPTNUI_LAND_REC_GROUPLET$2")))
-browser.find_element(By.ID, "win0groupletPTNUI_LAND_REC_GROUPLET$2").click()
-
-
-WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "pthnavbca_PORTAL_ROOT_OBJECT")))
-browser.find_element(By.ID, "pthnavbca_PORTAL_ROOT_OBJECT").click()
-
-WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "CO_EMPLOYEE_SELF_SERVICE")))
-browser.find_element(By.ID, "CO_EMPLOYEE_SELF_SERVICE").click()
-
-WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "HCCC_ENROLLMENT")))
-browser.find_element(By.ID, "HCCC_ENROLLMENT").click()
-
-WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//a[text()='PE Class Registration']")))
-browser.find_element(By.XPATH, "//a[text()='PE Class Registration']").click()
 
 print("Now we wait... Don't close out of this program or that window!")
 
