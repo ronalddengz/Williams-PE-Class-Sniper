@@ -73,3 +73,4 @@ while True:
     
     except:
         sleep(1)
+        browser.refresh()
