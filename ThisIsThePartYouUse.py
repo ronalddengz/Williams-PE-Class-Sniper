@@ -42,7 +42,7 @@ else:
     WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.authenticator-row:nth-child(2) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)")))
     browser.find_element(By.CSS_SELECTOR, "div.authenticator-row:nth-child(2) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)").click()   
 
-WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "userid")))
+WebDriverWait(browser, 100).until(EC.presence_of_element_located((By.ID, "userid")))
 browser.find_element(By.ID, "userid").send_keys(username)
 browser.find_element(By.ID, "pwd").send_keys(password)
 browser.find_element(By.CSS_SELECTOR, ".ps-button").click()
