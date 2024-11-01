@@ -1,9 +1,4 @@
-from selenium import webdriver
-from time import sleep
-
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+pip install -r requirements.txt
 
 url = 'https://sarah.williams.edu/psp/cs92prd/EMPLOYEE/SA/c/WMS_SS_STU_MENU.WMS_SS_PE_REG.GBL?FolderPath=PORTAL_ROOT_OBJECT.CO_EMPLOYEE_SELF_SERVICE.HCCC_ENROLLMENT.WMS_SS_PE_REG&IsFolder=false&IgnoreParamTempl=FolderPath,IsFolder'
 
