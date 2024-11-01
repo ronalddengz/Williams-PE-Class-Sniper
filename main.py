@@ -11,7 +11,7 @@ email = username + "@williams.edu"
 password = input("Password: ")
 
 okta = input("Verification via code or push notification? (1/2) ")
-class_id = f"WMS_M166_WK_SELECT${int(input('Class number (see classes.txt for class numbers): ')) - 1}"
+class_id = int(input('Class number (see classes.txt for class numbers): ')) - 1
 
 browser = webdriver.Firefox()
 browser.get(url)
